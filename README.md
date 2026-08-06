@@ -215,23 +215,26 @@ streamlit run app.py
 ---
 
 # 📷 Screenshots
+## 🏠 Home Page
 
-## Home Page
-
-_Add application screenshot here._
-
+<p align="center">
+  <img src="images/Capture d'écran 2026-06-18 112157.png" width="900">
+</p>
 ---
 
-## Prediction Page
+## 🔍 Prediction Page
 
-_Add application screenshot here._
-
----
+<p align="center">
+  <img src="images/Capture%20d%27%C3%A9cran%202026-06-18%20112310.png" width="900" alt="Prediction Page">
+</p>
 
 ## Results
 
-_Add prediction screenshot here._
+## 🔍 Prediction Page
 
+<p align="center">
+  <img src="images/Capture%20d%27%C3%A9cran%202026-06-18%20112310.png" width="900" alt="Prediction Page">
+</p>
 ---
 
 # 👨‍💻 Authors
