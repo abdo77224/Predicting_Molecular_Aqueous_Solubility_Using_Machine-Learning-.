@@ -237,15 +237,14 @@ _Add prediction screenshot here._
 # 👨‍💻 Authors
 
 - **Abdessalam Safadi**
-- **Souhail El Karem**
-- **Kawtar Elbejjaji**
+
 
 ---
 
 # 👨‍🏫 Supervisors
 
 - **Prof. El Habib Ben Lahmar**
-- **Mr. Oussama Kaich**
+
 
 ---
 
@@ -275,6 +274,5 @@ It helps others discover the project and supports future development.
 
 📧 abdessalam.safadi@etu.univh2c.ma
 
-LinkedIn: *(Your LinkedIn Profile)*
+LinkedIn: https://www.linkedin.com/in/abdessalam-safadi-0b1478245/
 
-GitHub: *(Your GitHub Profile)*
