@@ -1,89 +1,280 @@
-🧪 Predicting Molecular Aqueous Solubility Using Machine Learning
-📖 Overview
+# 🧪 Predicting Molecular Aqueous Solubility Using Machine Learning
 
-This project aims to predict the aqueous solubility (logS) of organic molecules using Machine Learning techniques. Predicting molecular solubility is a crucial step in drug discovery, as it helps researchers identify promising compounds while reducing the need for expensive and time-consuming laboratory experiments.
+<p align="center">
+  <img src="images/poster.png" width="900">
+</p>
 
-The application allows users to enter a molecule in SMILES format and instantly obtain its predicted aqueous solubility through an interactive Streamlit interface.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11-blue?logo=python">
+  <img src="https://img.shields.io/badge/Streamlit-WebApp-red?logo=streamlit">
+  <img src="https://img.shields.io/badge/XGBoost-Regression-success">
+  <img src="https://img.shields.io/badge/RDKit-Cheminformatics-orange">
+  <img src="https://img.shields.io/badge/License-MIT-green">
+</p>
 
-🚀 Features
-✅ Molecular solubility prediction (logS)
-✅ SMILES validation using RDKit
-✅ Molecular descriptor extraction
-✅ Morgan Fingerprint generation
-✅ Feature selection and preprocessing
-✅ Machine Learning model prediction
-✅ Interactive Streamlit web application
-📂 Dataset
+---
 
-The project uses the Delaney (ESOL) Dataset, which contains experimental aqueous solubility values for organic molecules.
+## 📌 Overview
 
-Dataset size: 9,982 molecules
-Target variable: logS (aqueous solubility)
-⚙️ Workflow
-SMILES
-      │
-      ▼
-SMILES Validation (RDKit)
-      │
-      ▼
-Molecular Descriptors
-      │
-      ▼
-Morgan Fingerprints
-      │
-      ▼
-Feature Selection
-      │
-      ▼
-Data Standardization
-      │
-      ▼
-Machine Learning Model
-      │
-      ▼
-Predicted logS
-🤖 Machine Learning Models
+Molecular aqueous solubility (**logS**) is one of the most important physicochemical properties in drug discovery and pharmaceutical research. Poor solubility can significantly affect the bioavailability and therapeutic effectiveness of drug candidates.
+
+This project presents an end-to-end **Machine Learning pipeline** for predicting the aqueous solubility (**logS**) of organic molecules directly from their **SMILES** representation.
+
+The developed application enables researchers and students to instantly estimate molecular solubility through an intuitive **Streamlit** interface.
+
+---
+
+## 🎯 Objectives
+
+- Predict aqueous solubility (logS) of organic molecules.
+- Reduce reliance on expensive laboratory experiments.
+- Compare several Machine Learning algorithms.
+- Build an interactive prediction application.
+- Demonstrate the use of AI in cheminformatics.
+
+---
+
+# 📊 Dataset
+
+**Dataset:** Delaney (ESOL)
+
+The dataset contains experimental aqueous solubility values for **9,982 organic molecules**.
+
+Target Variable:
+
+- **logS (Aqueous Solubility)**
+
+Input:
+
+- SMILES representation
+
+---
+
+# ⚙️ Project Workflow
+
+```text
+             SMILES
+                │
+                ▼
+      SMILES Validation
+          (RDKit)
+                │
+                ▼
+ Molecular Descriptor Extraction
+                │
+                ▼
+ Morgan Fingerprints (ECFP)
+                │
+                ▼
+ Feature Selection
+                │
+                ▼
+ Standardization
+                │
+                ▼
+ Train / Test Split
+                │
+                ▼
+ Machine Learning Models
+                │
+                ▼
+ Hyperparameter Optimization
+                │
+                ▼
+ Performance Evaluation
+                │
+                ▼
+ Streamlit Deployment
+```
+
+---
+
+# 🧬 Molecular Feature Extraction
+
+The project uses **RDKit** to extract molecular descriptors from SMILES.
+
+Examples include:
+
+- Molecular Weight
+- MolLogP
+- TPSA
+- Number of Hydrogen Bond Donors
+- Number of Hydrogen Bond Acceptors
+- Rotatable Bonds
+- Ring Count
+- Heavy Atom Count
+
+Additionally, **Morgan Fingerprints (ECFP)** are generated to capture structural information.
+
+---
+
+# 🤖 Machine Learning Models
 
 The following regression models were evaluated:
 
-Linear Regression
-Random Forest
-Support Vector Regression (SVR)
-XGBoost
+| Model | Purpose |
+|--------|----------|
+| Linear Regression | Baseline model |
+| Random Forest | Ensemble learning |
+| Support Vector Regression (SVR) | Non-linear regression |
+| XGBoost | Gradient Boosting |
 
-Among these models, XGBoost achieved the best overall performance and was selected for deployment.
+After comparison, **XGBoost** was selected as the final model due to its superior predictive performance.
 
-🛠️ Technologies Used
-Python
-Streamlit
-RDKit
-Scikit-learn
-XGBoost
-Pandas
-NumPy
-Joblib
-📊 Evaluation Metrics
+---
 
-The models were evaluated using:
+# 📈 Evaluation Metrics
 
-R² Score
-Mean Absolute Error (MAE)
-Root Mean Squared Error (RMSE)
-K-Fold Cross Validation
-💻 Installation
+Model performance was assessed using:
+
+- R² Score
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+- 5-Fold Cross Validation
+
+---
+
+# 💻 Streamlit Application
+
+The deployed application allows users to:
+
+✅ Enter a SMILES molecule
+
+✅ Validate the chemical structure
+
+✅ Compute molecular descriptors
+
+✅ Predict aqueous solubility (logS)
+
+✅ Display Lipinski's Rule of Five
+
+✅ Classify molecule solubility
+
+---
+
+# 🛠️ Technologies
+
+| Category | Tools |
+|-----------|------|
+| Programming | Python |
+| Cheminformatics | RDKit |
+| Machine Learning | Scikit-learn |
+| Boosting | XGBoost |
+| Data Analysis | Pandas, NumPy |
+| Deployment | Streamlit |
+| Model Persistence | Joblib |
+
+---
+
+# 📂 Repository Structure
+
+```text
+.
+├── data/
+│   ├── Delaney.csv
+│
+├── models/
+│   ├── xgboost_model.pkl
+│   ├── scaler.pkl
+│
+├── notebooks/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+```
+
+---
+
+# 🚀 Installation
 
 Clone the repository
 
-git clone https://github.com/your-username/your-repository.git
+```bash
+git clone https://github.com/your-username/repository-name.git
+```
 
-Go to the project folder
+Move into the project
 
-cd your-repository
+```bash
+cd repository-name
+```
 
 Install dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
 Run the application
 
+```bash
 streamlit run app.py
+```
+
+---
+
+# 📷 Screenshots
+
+## Home Page
+
+_Add application screenshot here._
+
+---
+
+## Prediction Page
+
+_Add application screenshot here._
+
+---
+
+## Results
+
+_Add prediction screenshot here._
+
+---
+
+# 👨‍💻 Authors
+
+- **Abdessalam Safadi**
+- **Souhail El Karem**
+- **Kawtar Elbejjaji**
+
+---
+
+# 👨‍🏫 Supervisors
+
+- **Prof. El Habib Ben Lahmar**
+- **Mr. Oussama Kaich**
+
+---
+
+# 🎓 Academic Context
+
+This project was developed as a **Final Year Project (PFE)** at
+
+**Faculty of Sciences Ben M'Sik**
+
+**Hassan II University of Casablanca**
+
+Academic Year **2025–2026**
+
+---
+
+# ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
+
+It helps others discover the project and supports future development.
+
+---
+
+## 📬 Contact
+
+**Abdessalam Safadi**
+
+📧 abdessalam.safadi@etu.univh2c.ma
+
+LinkedIn: *(Your LinkedIn Profile)*
+
+GitHub: *(Your GitHub Profile)*
